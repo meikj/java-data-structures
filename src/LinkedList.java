@@ -11,7 +11,7 @@ public class LinkedList<T> implements Iterable<T> {
     /**
      * Represents a node in a doubly-linked list, storing pointers to both prev and next nodes, and an element.
      */
-    private class Node {
+    public class Node {
         Node prev;
         Node next;
         T element;
