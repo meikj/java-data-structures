@@ -12,9 +12,9 @@ public class LinkedList<T> implements Iterable<T> {
      * Represents a node in a doubly-linked list, storing pointers to both prev and next nodes, and an element.
      */
     private class Node {
-        public Node prev;
-        public Node next;
-        public T element;
+        Node prev;
+        Node next;
+        T element;
         public Node(T element) { this.element = element; }
     }
 
@@ -27,7 +27,7 @@ public class LinkedList<T> implements Iterable<T> {
     public LinkedList() { }
 
     /**
-     * CHeck if the list is empty.
+     * Check if the list is empty.
      * @return whether or not the list is empty.
      */
     public boolean isEmpty() {
@@ -53,13 +53,6 @@ public class LinkedList<T> implements Iterable<T> {
     public T getTail() throws IllegalStateException {
         if (isEmpty())
             throw new IllegalStateException("Can't get tail of empty list.");
-        if (tail == null) {
-            Node curr = head;
-            do {
-                tail = curr;
-                curr = curr.next;
-            } while (curr != null);
-        }
         return tail.element;
     }
 
