@@ -125,6 +125,14 @@ public class ArrayList<T> implements Iterable<T> {
     }
 
     /**
+     * Check if an element exists in the list.
+     * @return whether or not the element exists.
+     */
+    public boolean exists(T element) {
+        return find(element) != -1;
+    }
+
+    /**
      * Enlarge the array by a factor of 2 (i.e. double the capacity).
      */
     private void enlargeArray() {
