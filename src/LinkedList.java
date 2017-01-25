@@ -6,7 +6,7 @@ import java.util.Iterator;
  * @param <T> the type of elements to store in the list.
  * @author John Meikle
  */
-public class LinkedList<T> implements Iterable<T> {
+public class LinkedList<T> implements Iterable<T>, Queue<T> {
 
     /**
      * Represents a node in a doubly-linked list, storing pointers to both prev and next nodes, and an element.
@@ -32,6 +32,23 @@ public class LinkedList<T> implements Iterable<T> {
      */
     public boolean isEmpty() {
         return head != null;
+    }
+
+    @Override
+    public void enqueue(T element) {
+        addStart(element);
+    }
+
+    @Override
+    public T dequeue() {
+        T start = getStart();
+        delete(start);
+        return start;
+    }
+
+    @Override
+    public T getStart() {
+        return getHead();
     }
 
     /**
