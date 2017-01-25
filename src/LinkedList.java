@@ -177,10 +177,7 @@ public class LinkedList<T> implements Iterable<T> {
         return null;
     }
 
-    /**
-     * Iterate over the elements of the list.
-     * @return an iterator.
-     */
+    @Override
     public Iterator<T> iterator() {
         return new Iterator<T>() {
             Node curr = head;
