@@ -31,7 +31,7 @@ public class LinkedList<T> implements Iterable<T>, Queue<T> {
      * @return whether or not the list is empty.
      */
     public boolean isEmpty() {
-        return head != null;
+        return head == null;
     }
 
     @Override
