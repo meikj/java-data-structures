@@ -6,7 +6,7 @@ The data structures (to be) implemented are:
 * Doubly-linked list
 * Binary tree (in progress)
 * Trie (in progress)
-* Array / vector (in progress)
+* Array / vector
 * Hash table (in progress)
 
 A Stack and Queue interface will be developed for the doubly-linked list, just to demonstrate that a doubly-linked list
